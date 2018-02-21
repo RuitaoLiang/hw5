@@ -6,7 +6,7 @@ function setup() {
 
     squares[index] = {
       x: random(200, 300),
-      y: random(290, 350),
+      y: random(height),
       xd: random(-10, -1),
       yd: random(-10, -1),
       r:  random(0, 50),
@@ -43,8 +43,8 @@ function draw() {
   
   // if reach past the top a bunch
   if (square.y < -150) {
-    squares.y = 290;
-
-  	}
-	}
+    square.y = 290;
+    square.x = width/2;
+  }
+ }
 }
